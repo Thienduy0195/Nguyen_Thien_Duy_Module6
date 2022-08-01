@@ -1,0 +1,209 @@
+<div class="container">
+  <div class="title container text-center mt-5 mb-5 bg-dark p-1">
+    <h1 style="color: #ffffff">ACCOUNT INFORMATION</h1>
+  </div>
+
+  <form [formGroup]="userForm" class="container">
+    <div class="row container-fluid">
+      <div class="col-6 d-flex">
+        <div class="col-4 p-0">
+          <label class="col-form-label text-right" readonly>UserName</label>
+        </div>
+        <div class="sub-info form-group row col-7" id="userNameShow">
+          <div class="col-12 p-0">
+            <p class="form-control">thienduy0195</p>
+          </div>
+        </div>
+<!--        <div style="display: none" class="sub-info form-group row col-7" id="userNameEdit">-->
+<!--          <div class="col-12 p-0">-->
+<!--            <input formControlName="userName" type="text" class="form-control"-->
+<!--                   placeholder="Enter user name">-->
+<!--          </div>-->
+<!--        </div>-->
+        <div class="col-1 ml-2">
+          <a class="btn" (click)="idName='userName'">
+            <i class="fa-solid fa-pen-to-square"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-6 d-flex">
+        <div class="col-4 p-0">
+          <label class="col-form-label text-right" for="fullName">Full Name</label>
+        </div>
+        <div class="sub-info form-group row col-7">
+          <div class="col-12 p-0">
+            <input formControlName="fullName" type="text" id="fullName" class="form-control"
+                   placeholder="Enter full name"  [disabled]="!active">
+          </div>
+          <div class="text-small text-danger"
+               *ngIf="!userForm.controls.fullName?.valid
+                && (userForm.controls.fullName?.dirty ||userForm.controls.fullName?.touched)">
+            <div [hidden]="!userForm.controls.fullName.errors.required">
+             Full name must be required!
+            </div>
+            <div [hidden]="!userForm.controls.fullName.errors.pattern">
+              Full name must only contain alphabe character!
+            </div>
+          </div>
+        </div>
+        <div class="col-1 ml-2">
+          <a class="btn" (click)="idName='fullName'">
+            <i class="fa-solid fa-pen-to-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row container-fluid">
+      <div class="col-6 d-flex">
+        <div class="col-4 p-0">
+          <label class="col-form-label text-right" for="dateOfBirth">Date of birth</label>
+        </div>
+        <div class="sub-info form-group row col-7">
+          <div class="col-12 p-0">
+            <input formControlName="dateOfBirth" type="date" id="dateOfBirth" class="form-control"
+                   placeholder="Enter date of birth">
+          </div>
+          <div class="text-small text-danger"
+               *ngIf="!userForm.controls.dateOfBirth?.valid
+                && (userForm.controls.dateOfBirth?.dirty ||userForm.controls.dateOfBirth?.touched)">
+            <div [hidden]="!userForm.controls.dateOfBirth.errors.required">
+              Date Of Birth must be required!
+            </div>
+            <div [hidden]="!userForm.controls.dateOfBirth.errors.pattern">
+              Date Of Birth must exact pattern dd/MM/yyyy!
+            </div>
+          </div>
+        </div>
+        <div class="col-1 ml-2">
+          <a class="btn" (click)="idName='dateOfBirth'">
+            <i class="fa-solid fa-pen-to-square"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-6 d-flex">
+        <div class="col-4 p-0">
+          <label class="col-form-label text-right" for="email">Email</label>
+        </div>
+        <div class="sub-info form-group row col-7">
+          <div class="col-12 p-0">
+            <input formControlName="email" type="text" id="email" class="form-control"
+                   placeholder="Enter email">
+          </div>
+          <div class="text-small text-danger"
+               *ngIf="!userForm.controls.email?.valid
+                && (userForm.controls.email?.dirty ||userForm.controls.email?.touched)">
+            <div [hidden]="!userForm.controls.email.errors.required">
+              Email must be required!
+            </div>
+            <div [hidden]="!userForm.controls.email.errors.email">
+              Email must be in right format!
+            </div>
+          </div>
+        </div>
+        <div class="col-1 ml-2">
+          <i class="fa-solid fa-pen-to-square"></i>
+        </div>
+      </div>
+    </div>
+    <div class="row container-fluid">
+      <div class="col-12 d-flex">
+        <div class="col-2 p-0">
+          <label class="col-form-label text-right" for="address">Address</label>
+        </div>
+        <div class="sub-info form-group row col-6">
+          <div class="col-12 p-0">
+            <input formControlName="address" type="text" id="address" class="form-control"
+                   placeholder="Enter address">
+          </div>
+          <div class="text-small text-danger"
+               *ngIf="!userForm.controls.address?.valid
+                && (userForm.controls.address?.dirty ||userForm.controls.address?.touched)">
+            <div [hidden]="!userForm.controls.address.errors.required">
+              Address must be required!
+            </div>
+          </div>
+        </div>
+        <div class="col-1 ml-2">
+          <i class="fa-solid fa-pen-to-square"></i>
+        </div>
+      </div>
+    </div>
+    <div class="row container-fluid">
+      <div class="col-6 d-flex">
+        <div class="col-4 p-0">
+          <label class="col-form-label text-right" for="phoneNumber">Phone Number</label>
+        </div>
+        <div class="sub-info form-group row col-7">
+          <div class="col-12 p-0">
+            <input formControlName="phoneNumber" type="text" id="phoneNumber" class="form-control"
+                   placeholder="Enter phone number">
+          </div>
+          <div class="text-small text-danger"
+               *ngIf="!userForm.controls.phoneNumber?.valid
+                && (userForm.controls.phoneNumber?.dirty ||userForm.controls.phoneNumber?.touched)">
+            <div [hidden]="!userForm.controls.phoneNumber.errors.required">
+              Phone number must be required!
+            </div>
+            <div [hidden]="!userForm.controls.phoneNumber.errors.pattern">
+              Phone number must be start with 090 | 091 | (+84)90 | (+84)91
+            </div>
+          </div>
+        </div>
+        <div class="col-1 ml-2">
+          <i class="fa-solid fa-pen-to-square"></i>
+        </div>
+      </div>
+
+      <div class="col-6 d-flex">
+        <div class="col-4 p-0">
+          <label class="col-form-label text-right" for="password">Password</label>
+        </div>
+        <div class="sub-info form-group row col-7">
+          <div class="col-12 p-0">
+            <input formControlName="password" type="password" id="password" class="form-control"
+                   placeholder="Enter password">
+          </div>
+          <div class="text-small text-danger"
+               *ngIf="!userForm.controls.password?.valid
+                && (userForm.controls.password?.dirty ||userForm.controls.password?.touched)">
+            <div [hidden]="!userForm.controls.password.errors.required">
+              Please enter the password!
+            </div>
+            <div [hidden]="!userForm.controls.password.errors.pattern">
+              Password must contain alphabe character!
+            </div>
+          </div>
+        </div>
+        <div class="col-1 ml-2">
+          <i class="fa-solid fa-pen-to-square"></i>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="text-center">
+    <button class="btn-success" [disabled]="userForm.invalid" (click)="saveUser()">
+      SAVE
+    </button>
+    <button (click)="show()">SHOW</button>
+  </div>
+</div>
+
+<script>
+  let idShow = '';
+  let idEdit = '';
+  window.onload = function () {
+    idShow = idName + 'Show';
+    idEdit = idName + 'Edit';
+      document.getElementById(idShow).style.display = "none";
+      document.getElementById(idEdit).style.display = "block";
+  }
+  // function change() {
+  //   let idShow = idName + 'Show';
+  //   let idEdit = idName + 'Edit';
+  //   document.getElementById(idShow).style.display = "none";
+  //   document.getElementById(idEdit).style.display = "block";
+  // }
+</script>
+
