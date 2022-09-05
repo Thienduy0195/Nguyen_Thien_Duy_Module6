@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        label {
+            font-weight: bold;
+            padding: 0 0;
+            color: white;
+        }
+
+        .input-form {
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+        }
+
+        .container {
+            background: #2A2A2A;
+        }
+
+        input {
+            margin-bottom: 0.5em;
+        }
+
+        .btn {
+            margin-left: 1em;
+        }
+
+        .container {
+            /*background: #ffe8a1;*/
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--    <link rel="stylesheet" href="\bootstrap\css\bootstrap.min.css">-->
+    <meta charset="UTF-8">
+    <title>THÔNG TIN CÁ NHÂN</title>
+</head>
+<body style="background: #121212">
+<div class="container-fluid">
+    <div class="container mb-5 d-flex">
+        <form class="col-6">
+            <div class="title text-center text-white pt-2 pb-2">
+                <h2>THÔNG TIN TÀI KHOẢN</h2>
+            </div>
+            <div class="row container-fluid m-0 mb-2">
+                <div class="col-12 d-flex input-form">
+                    <div class="col-4 p-0">
+                        <label class="col-form-label text-right" readonly>Tên tài khoản</label>
+                    </div>
+                    <div class="sub-info form-group row col-7" id="userNameEdit">
+                        <div class="col-12 p-0">
+                            <input type="text" class="form-control"
+                                   placeholder="thienduy0195" readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 d-flex input-form">
+                    <div class="col-4 p-0">
+                        <label class="col-form-label text-right">Họ và tên</label>
+                    </div>
+                    <div class="sub-info form-group row col-7">
+                        <div class="col-12 p-0">
+                            <input type="text" class="form-control"
+                                   placeholder="Nguyen Thien Duy" readonly>
+                        </div>
+                    </div>
+                    <!--                    <div class="sub-info form-group row col-7">-->
+                    <!--                        <div class="col-12 p-0">-->
+                    <!--                            <input type="text" id="fullName" class="form-control border-warning"-->
+                    <!--                                   placeholder="Enter full name">-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                    <div class="col-1 ml-2">
+                        <a class="btn">
+                            <i class="fa-solid fa-pen-to-square text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 d-flex input-form">
+                    <div class="col-4 p-0">
+                        <label class="col-form-label text-right">Ngày sinh</label>
+                    </div>
+                    <div class="sub-info form-group row col-7">
+                        <div class="col-12 p-0">
+                            <input type="text" class="form-control"
+                                   placeholder="01/01/1995" readonly>
+                        </div>
+                    </div>
+                    <div class="col-1 ml-2">
+                        <a class="btn">
+                            <i class="fa-solid fa-pen-to-square text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 d-flex input-form">
+                    <div class="col-4 p-0">
+                        <label class="col-form-label text-right">Email</label>
+                    </div>
+                    <div class="sub-info form-group row col-7">
+                        <div class="col-12 p-0">
+                            <input type="text" class="form-control"
+                                   placeholder="thienduy0195@gmail.com" readonly>
+                        </div>
+                    </div>
+                    <div class="col-1 ml-2">
+                        <a class="btn">
+                            <i class="fa-solid fa-pen-to-square text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 d-flex input-form">
+                    <div class="col-4 p-0">
+                        <label class="col-form-label text-right">Địa chỉ</label>
+                    </div>
+                    <div class="sub-info form-group row col-7">
+                        <div class="col-12 p-0">
+                            <input type="text" class="form-control"
+                                   placeholder="Nui Thanh - Quang Nam" readonly>
+                        </div>
+                    </div>
+                    <div class="col-1 ml-2">
+                        <a class="btn">
+                            <i class="fa-solid fa-pen-to-square text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 d-flex input-form">
+                    <div class="col-4 p-0">
+                        <label class="col-form-label text-right">Số điện thoại</label>
+                    </div>
+                    <div class="sub-info form-group row col-7">
+                        <div class="col-12 p-0">
+                            <input type="text" class="form-control"
+                                   placeholder="0917579123" readonly>
+                        </div>
+                    </div>
+                    <div class="col-1 ml-2">
+                        <a class="btn">
+                            <i class="fa-solid fa-pen-to-square text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 d-flex input-form">
+                    <div class="col-4 p-0">
+                        <label class="col-form-label text-right">Mật khẩu</label>
+                    </div>
+                    <div class="sub-info form-group row col-7">
+                        <div class="col-12 p-0">
+                            <input type="password" class="form-control"
+                                   placeholder="Thienduy123" readonly>
+                        </div>
+                    </div>
+                    <div class="col-1 ml-2">
+                        <a class="btn">
+                            <i class="fa-solid fa-pen-to-square text-white"></i>
+                        </a>
+                    </div>
+                    <div class="col-1 ml-2">
+                        <a class="btn">
+                            <i class="fa-solid fa-eye text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 d-flex input-form">
+                    <div class="col-4 p-0">
+                        <label class="col-form-label text-right">Xác nhận</label>
+                    </div>
+                    <div class="sub-info form-group row col-7">
+                        <div class="col-12 p-0">
+                            <input type="password" class="form-control border-warning"
+                                   placeholder="Thienduy123">
+                        </div>
+                    </div>
+                    <div class="col-1 ml-2">
+                        <a class="btn">
+                            <i class="fa-solid fa-eye text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn-outline-light btn-dark btn-sm mb-3">
+                    LƯU THAY ĐỔI
+                </button>
+            </div>
+        </form>
+        <div class="col-6">
+            <div class="col-6">
+                <p style="font-weight: bold">
+                    REMAINING TIME
+                </p>
+                <p>
+                    03 hour : 26 minutes
+                </p>
+                <a class="btn btn-success">THÊM GIỜ</a>
+            </div>
+            <div class="col-6">
+                <h1>AVATAR HERE</h1>
+            </div>
+        </div>
+
+    </div>
+
+    <!--  <div class="col-6">-->
+    <!--    <img [src]="background" alt="">-->
+    <!--  </div>-->
+</div>
+
+
+</body>
+</html>

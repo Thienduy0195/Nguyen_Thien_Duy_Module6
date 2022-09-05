@@ -8,13 +8,15 @@ import { ServiceRequiredComponent } from './component/service-required/service-r
 import {HttpClientModule} from "@angular/common/http";
 import { NotFoundErrComponent } from './component/not-found-err/not-found-err.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { PaymentDetailComponent } from './component/payment-detail/payment-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserDetailComponent,
     ServiceRequiredComponent,
-    NotFoundErrComponent
+    NotFoundErrComponent,
+    PaymentDetailComponent
   ],
   imports: [
     BrowserModule,
